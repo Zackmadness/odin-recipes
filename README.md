@@ -21,9 +21,3 @@ The assignment had use making a website for a recipes.
 2. HTML writing
 3. Index creaction
 
-# Table of Contents
-
-This is a table of contents for your project. It helps the reader navigate through the README quickly.
-- [Odin Recipes](#odin-recipes)
-- [Quick Start Demo](#quick-start-demo)
-
