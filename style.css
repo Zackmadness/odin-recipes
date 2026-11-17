@@ -1,69 +1,189 @@
+/* =========================
+   Global Styles
+========================= */
 
-/* Home Page */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-.recipe-list{
-    list-style: none;
-    padding: 10px;
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =========================
+   Header
+========================= */
+
+header {
     text-align: center;
-}
-
-.resp {
-    display: inline-block;
-    padding: 10px 30px;
-    background-color: rgb(0, 123, 255);
-    color:white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-family: sans-serif;
-    margin: 2.5px;
-}
-
-.resp-bottom {
-    display: block;
-    width: fit-content;
-    margin: 30px auto;
-    padding: 10px 30px;
-    background-color: rgb(0, 123, 255);
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #ff7b00, #ff9500);
     color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-family: sans-serif;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
 }
 
-
-.resp-bottom:hover {
-    background-color: rgb(0, 86, 179);
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
 }
 
-
-.resp:hover {
-    background-color: rgb(0, 86, 179);
+.tagline {
+    font-size: 1.1rem;
+    opacity: 0.95;
 }
 
-.top{
+/* =========================
+   Homepage Recipe Grid
+========================= */
+
+.recipe-grid {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1rem;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.recipe-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
     text-align: center;
-    font-size: 50px;
-    font-weight: bold;
-    font-family: sans-serif;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
+.recipe-card:hover {
+    transform: translateY(-6px);
 
-.recipe-img{
-    max-width: 100%;
-    height: 500px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.recipe-card h2 {
+    margin-bottom: 1rem;
+    color: #222;
+}
+
+/* =========================
+   Buttons & Links
+========================= */
+
+.button,
+.recipe-card a {
+    display: inline-block;
+    text-decoration: none;
+
+    background-color: #0078ff;
+    color: white;
+
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+
+    font-weight: 600;
+
+    transition: background-color 0.2s ease;
+}
+
+.button:hover,
+.recipe-card a:hover {
+    background-color: #005ec7;
+}
+
+/* =========================
+   Recipe Pages
+========================= */
+
+.recipe-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.recipe-container section {
+    background: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.recipe-container h2 {
+    color: #ff7b00;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+/* =========================
+   Images
+========================= */
+
+.recipe-image {
     display: block;
-    margin: 20px auto;
+
+    width: 100%;
+    max-width: 700px;
+
+    margin: 2rem auto;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+    object-fit: cover;
 }
 
-.subtitle {
-    text-align: left;
-    font-size: 36px;
-    font-weight: bold;
-    font-family: sans-serif;
+/* =========================
+   Lists
+========================= */
+
+ul,
+ol {
+    margin-left: 1.5rem;
 }
 
-.body {
-    text-align: left;
-    font-size: 24px;
-    font-family: sans-serif;
+li {
+    margin-bottom: 0.75rem;
+}
+
+/* =========================
+   Footer
+========================= */
+
+footer {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* =========================
+   Mobile Devices
+========================= */
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .recipe-container section {
+        padding: 1.5rem;
+    }
+
+    .button,
+    .recipe-card a {
+        width: 100%;
+        text-align: center;
+    }
 }
